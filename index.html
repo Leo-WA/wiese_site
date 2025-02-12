@@ -68,7 +68,7 @@
             <!-- Theme change button -->
             <i class='bx bx-moon change-theme' id="theme-button"></i>
 
-            <a href="https://w.app/wiesetech" class="nav__button button">Contact Us</a>
+            <a href="https://w.app/wiesetech" class="nav__button button" onclick="return gtag_report_conversion('https://w.app/wiesetech');">Contact Us</a>
         </nav>
     </header>
 
@@ -116,7 +116,7 @@
                     <div class="swiper-wrapper">
                         <!-- Automation Processes -->
                         <article class="popular__card swiper-slide">
-                            <a href="https://w.app/wiesetech" class="popular__link">
+                            <a href="https://w.app/wiesetech" class="popular__link" onclick="return gtag_report_conversion('https://w.app/wiesetech');">
                                 <img src="assets/img/popular6.png" alt="Automation Processes" class="popular__img">
                                 <div class="popular__data">
                                     <h3 class="popular__title">
@@ -128,7 +128,7 @@
         
                         <!-- Social Media Management -->
                         <article class="popular__card swiper-slide">
-                            <a href="https://w.app/wiesetech" class="popular__link">
+                            <a href="https://w.app/wiesetech" class="popular__link" onclick="return gtag_report_conversion('https://w.app/wiesetech');">
                                 <img src="assets/img/popular5.png" alt="Social Media Management" class="popular__img">
                                 <div class="popular__data">
                                     <h3 class="popular__title">
@@ -140,7 +140,7 @@
         
                         <!-- Pixel Installation -->
                         <article class="popular__card swiper-slide">
-                            <a href="https://w.app/wiesetech" class="popular__link">
+                            <a href="https://w.app/wiesetech" class="popular__link" onclick="return gtag_report_conversion('https://w.app/wiesetech');">
                                 <img src="assets/img/popular1.png" alt="Pixel Installation" class="popular__img">
                                 <div class="popular__data">
                                     <h3 class="popular__title">
@@ -152,7 +152,7 @@
         
                         <!-- Landing Pages -->
                         <article class="popular__card swiper-slide">
-                            <a href="https://w.app/wiesetech" class="popular__link">
+                            <a href="https://w.app/wiesetech" class="popular__link" onclick="return gtag_report_conversion('https://w.app/wiesetech');">
                                 <img src="assets/img/popular3.png" alt="Landing Pages" class="popular__img">
                                 <div class="popular__data">
                                     <h3 class="popular__title">
@@ -164,7 +164,7 @@
         
                         <!-- Online Advertising -->
                         <article class="popular__card swiper-slide">
-                            <a href="https://w.app/wiesetech" class="popular__link">
+                            <a href="https://w.app/wiesetech" class="popular__link" onclick="return gtag_report_conversion('https://w.app/wiesetech');">
                                 <img src="assets/img/popular2.png" alt="Online Advertising" class="popular__img">
                                 <div class="popular__data">
                                     <h3 class="popular__title">
@@ -312,7 +312,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <button class="button contact__card-button">
+                            <button class="button contact__card-button" onclick="return gtag_report_conversion('https://w.app/wiesetech');">
                                 <a href="https://w.app/wiesetech">Click Here</a>
                             </button>
                         </div>
@@ -331,7 +331,7 @@
                 <p class="subscribe__description">
                     Discover the best online advertising and automation services. The best part? ZERO headaches for your projects.
                 </p>
-                <a href="https://w.app/wiesetech" class="button subscribe__button">
+                <a href="https://w.app/wiesetech" class="button subscribe__button" onclick="return gtag_report_conversion('https://w.app/wiesetech');">
                     Contact Us
                 </a>
             </div>
@@ -389,5 +389,19 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
-</body>
-</html>
+
+    <!-- Event snippet for Enviar formulário de lead - meu site conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-10879059690/OVL1CMXCpbADEOqNxcMo',
+          'event_callback': callback
+      });
+      return false;
+    }
+   
